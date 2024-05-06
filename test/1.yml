@@ -1,0 +1,21 @@
+cnstack-v1.2.0:
+  meta:
+    tourl:
+      - ref: schedulerx__toUrl__Toschedulerx
+  groups:
+    - name: attach-1
+      desc: 图1
+      steps:
+        - cmd: click
+          location: (//div[@class='nav-title'])[4]
+          desc: 选择schedulerx应用管理
+        - cmd: click
+          location: (//button[@type='button'])[3]
+          desc: 点击创建应用分组菜单栏
+  groups:
+    - name: createInstanceA
+      desc: 1.创建Topic-普通消息
+      steps:
+        - ref: ascm__mq__topic__createTopic
+        - ref: ascm__mq__topic__createComonTopic
+        - ref: ascm__mq__topic__setTopicName
